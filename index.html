@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zaleora — Build What You Create. Grow What You Carry.</title>
+  <meta name="description" content="Zaleora is being built as one connected creative ecosystem — identity, skills, portfolio, community, opportunities, marketplace and AI support. Join the waitlist." />
+  <meta name="author" content="Zaleora" />
+  <meta name="theme-color" content="#2E1435" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zaleora — Build What You Create. Grow What You Carry." />
+  <meta property="og:description" content="One connected ecosystem for creatives to build their identity, develop their skills, showcase their work, find opportunities and grow. Join the waitlist." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;1,500;1,600&family=Anton&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Reveal animations only apply when JS is running, so content is never hidden without it. -->
+  <script>
+    document.documentElement.classList.add('js');
+    // Safety net: if script.js fails to load or run, reveal all content instead of leaving the page blank.
+    setTimeout(function () {
+      if (!window.__zaleoraReady) document.documentElement.classList.add('reveal-fallback');
+    }, 2500);
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-arrow-down-right" viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8L19 15z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16z"/><path d="M4 21.5A2.5 2.5 0 0 1 6.5 19H20"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.8"/><path d="m21 15-4.5-4.5L6 21"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14c2.2.7 3.5 2.7 3.5 6"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+      <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6H2z"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M19 9a4 4 0 0 1 0 6"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.5v.01M12 16v-5.5M12 13c0-1.7 1-2.7 2.5-2.7S17 11.3 17 13v3"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ───────────────────────── Navigation ───────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Zaleora — back to top">
+        <img src="assets/logo-white.png" alt="Zaleora" width="720" height="150" />
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#ecosystem" data-spy="ecosystem">Ecosystem</a>
+        <a href="#ai" data-spy="ai">Zaleora AI</a>
+        <a href="#about" data-spy="about">About</a>
+      </nav>
+
+      <a href="#waitlist" class="btn btn--purple nav__cta" data-cta>Join the Waitlist</a>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <svg class="icon icon--lg icon-open"><use href="#i-menu"/></svg>
+        <svg class="icon icon--lg icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+
+    <div class="nav__menu" id="navMenu" hidden>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#ai">Zaleora AI</a>
+      <a href="#about">About</a>
+      <a href="#waitlist" class="btn btn--gold" data-cta>Join the Waitlist</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ───────────────────────── 01 · Hero ───────────────────────── -->
+    <section class="hero" id="top">
+      <img class="hero__bg" src="assets/hero.jpg" alt="" aria-hidden="true" fetchpriority="high" />
+      <div class="hero__scrim hero__scrim--x" aria-hidden="true"></div>
+      <div class="hero__scrim hero__scrim--top" aria-hidden="true"></div>
+      <div class="hero__scrim hero__scrim--bottom" aria-hidden="true"></div>
+      <div class="hero__pattern" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title hero__item" style="--d:0s">
+            Build What You Create.
+            <span class="hero__title-accent">Grow What You Carry.</span>
+          </h1>
+
+          <p class="hero__lede hero__item" style="--d:.1s">
+            One connected ecosystem to build your identity, showcase your work, find opportunities and grow.
+          </p>
+
+          <div class="hero__actions hero__item" style="--d:.2s">
+            <a href="#waitlist" class="btn btn--gold btn--lg" data-cta>
+              Join the Waitlist
+              <svg class="icon icon--sm btn__arrow"><use href="#i-arrow"/></svg>
+            </a>
+            <a href="#ecosystem" class="btn btn--ghost btn--lg">Explore Zaleora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 02 · Problem / Vision ───────────────────────── -->
+    <section class="section section--ivory problem" id="vision">
+      <div class="container problem__grid">
+        <div class="problem__copy">
+          <p class="eyebrow eyebrow--gold reveal">The Problem · The Vision</p>
+          <h2 class="h2 reveal" style="--d:.08s">
+            Creative Talent Is Not the Problem.
+            <span class="h2__soft">The System Around It Is Often Fragmented.</span>
+          </h2>
+          <p class="lead reveal" style="--d:.14s">A creative’s journey shouldn’t require a dozen disconnected tools.</p>
+          <p class="body reveal" style="--d:.2s">
+            Zaleora is being built to bring these parts of the journey closer together — turning creative ability into
+            visible identity, meaningful opportunity and economic value.
+          </p>
+          <div class="reveal" style="--d:.26s">
+            <a href="#waitlist" class="btn btn--plum btn--lg" data-cta>
+              Join the Waitlist
+              <svg class="icon icon--sm btn__arrow"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scattered tools that pull together into one connected hub -->
+        <div class="frag reveal" id="frag" style="--d:.1s" role="img"
+             aria-label="Seven separate tools — learning, portfolios, opportunities, selling, marketing, customers and collaborations — connecting into one Zaleora hub.">
+          <svg class="frag__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="50" y1="50" x2="50"   y2="12"   pathLength="1"/>
+            <line x1="50" y1="50" x2="79.7" y2="26.3" pathLength="1"/>
+            <line x1="50" y1="50" x2="87"   y2="58.5" pathLength="1"/>
+            <line x1="50" y1="50" x2="66.5" y2="84.2" pathLength="1"/>
+            <line x1="50" y1="50" x2="33.5" y2="84.2" pathLength="1"/>
+            <line x1="50" y1="50" x2="13"   y2="58.5" pathLength="1"/>
+            <line x1="50" y1="50" x2="20.3" y2="26.3" pathLength="1"/>
+          </svg>
+
+          <div class="frag__hub" aria-hidden="true">
+            <span class="frag__pulse"></span>
+            <img src="assets/favicon-512.png" alt="" width="512" height="512" />
+          </div>
+
+          <span class="chip" aria-hidden="true" style="--x:50%;--y:12%;--dx:-9%;--dy:-4%;--r:-7deg"><svg class="icon icon--sm"><use href="#i-book"/></svg>Learning</span>
+          <span class="chip" aria-hidden="true" style="--x:79.7%;--y:26.3%;--dx:9%;--dy:-9%;--r:6deg"><svg class="icon icon--sm"><use href="#i-image"/></svg>Portfolios</span>
+          <span class="chip" aria-hidden="true" style="--x:87%;--y:58.5%;--dx:2%;--dy:-13%;--r:-5deg"><svg class="icon icon--sm"><use href="#i-search"/></svg>Opportunities</span>
+          <span class="chip" aria-hidden="true" style="--x:66.5%;--y:84.2%;--dx:10%;--dy:2%;--r:8deg"><svg class="icon icon--sm"><use href="#i-bag"/></svg>Selling</span>
+          <span class="chip" aria-hidden="true" style="--x:33.5%;--y:84.2%;--dx:-12%;--dy:5%;--r:-8deg"><svg class="icon icon--sm"><use href="#i-megaphone"/></svg>Marketing</span>
+          <span class="chip" aria-hidden="true" style="--x:13%;--y:58.5%;--dx:-2%;--dy:13%;--r:5deg"><svg class="icon icon--sm"><use href="#i-message"/></svg>Customers</span>
+          <span class="chip" aria-hidden="true" style="--x:20.3%;--y:26.3%;--dx:-10%;--dy:8%;--r:-6deg"><svg class="icon icon--sm"><use href="#i-users"/></svg>Collaborations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 03 · Ecosystem ───────────────────────── -->
+    <section class="section section--cream" id="ecosystem">
+      <div class="container">
+        <div class="section__head">
+          <div class="section__head-main">
+            <p class="eyebrow eyebrow--gold reveal">The Zaleora Ecosystem</p>
+            <h2 class="h2 reveal" style="--d:.08s">Everything You Need to Build Your Creative Journey.</h2>
+          </div>
+          <p class="section__head-side reveal" style="--d:.14s">
+            One ecosystem. Multiple pathways. A connected experience designed around you.
+          </p>
+        </div>
+
+        <div class="stack">
+          <article class="stack-card stack-card--gold" style="--i:0">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Creative Identity</h3>
+              <p class="stack-card__text">Build a professional identity around your skills, experience, work and credibility.</p>
+              <ul class="stack-card__rows"><li><span>Your skills</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Your experience</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Your work and credibility</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <div class="media-faces" aria-hidden="true"><img src="assets/face-2.jpg" alt="" loading="lazy" /><img src="assets/face-5.jpg" alt="" loading="lazy" /><img src="assets/face-9.jpg" alt="" loading="lazy" /></div>
+              <span class="stack-card__pill">01 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--lilac" style="--i:1">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Academy</h3>
+              <p class="stack-card__text">Learn, practise and develop the skills that move you forward.</p>
+              <ul class="stack-card__rows"><li><span>Learn</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Practise</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Develop</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <img src="assets/academy.jpg" style="object-position: 50% 20%" alt="A creative working on a laptop at a wooden desk at home" loading="lazy" />
+              <span class="stack-card__pill">02 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--bronze" style="--i:2">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Portfolio</h3>
+              <p class="stack-card__text">Turn your work and experience into visible proof of what you can do.</p>
+              <ul class="stack-card__rows"><li><span>Your work</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Your experience</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Visible proof</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <div class="media-portfolio" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+              <span class="stack-card__pill">03 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--sand" style="--i:3">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Community</h3>
+              <p class="stack-card__text">Find your people, exchange knowledge and build meaningful relationships.</p>
+              <ul class="stack-card__rows"><li><span>Find your people</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Exchange knowledge</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Build meaningful relationships</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <img src="assets/community.jpg" alt="Creatives laughing together around a laptop" loading="lazy" />
+              <span class="stack-card__pill">04 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--purple" style="--i:4">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Collaborations &amp; Opportunities</h3>
+              <p class="stack-card__text">Discover briefs, projects, jobs, grants, competitions, events and people to build with.</p>
+              <ul class="stack-card__rows"><li><span>Briefs and projects</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Jobs, grants and competitions</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Events and people to build with</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <img src="assets/collaboration.jpg" alt="A team of creatives collaborating around a table with laptops" loading="lazy" />
+              <span class="stack-card__pill">05 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--honey" style="--i:5">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Marketplace</h3>
+              <p class="stack-card__text">Present and sell your creative products and services.</p>
+              <ul class="stack-card__rows"><li><span>Present your work</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Sell your products</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Offer your services</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <img src="assets/marketplace.jpg" style="object-position: 50% 8%" alt="A smiling designer reviewing her work on a tablet" loading="lazy" />
+              <span class="stack-card__pill">06 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--mauve" style="--i:6">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">Heritage</h3>
+              <p class="stack-card__text">Discover living creative knowledge, practices, stories and inspiration.</p>
+              <ul class="stack-card__rows"><li><span>Living creative knowledge</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Practices and stories</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Inspiration</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+            </div>
+            <div class="stack-card__media">
+              <img src="assets/heritage.jpg" alt="Clay-covered hands shaping a pot on a potter's wheel" loading="lazy" />
+              <span class="stack-card__pill">07 / 08</span>
+            </div>
+          </article>
+          <article class="stack-card stack-card--plum" style="--i:7">
+            <div class="stack-card__body">
+              <h3 class="stack-card__title">AI Intelligence</h3>
+              <p class="stack-card__text">Receive personalised support across your creative journey.</p>
+              <ul class="stack-card__rows"><li><span>Personalised support</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>Across the whole journey</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li><li><span>You stay in control</span><svg class="icon icon--sm"><use href="#i-chevron"/></svg></li></ul>
+              <a href="#ai" class="stack-card__link">Meet Zaleora AI <svg class="icon icon--sm"><use href="#i-arrow"/></svg></a>
+            </div>
+            <div class="stack-card__media">
+              <div class="media-ai" aria-hidden="true"><span class="media-ai__ring media-ai__ring--a"></span><span class="media-ai__ring media-ai__ring--b"></span><span class="media-ai__dot media-ai__dot--1"></span><span class="media-ai__dot media-ai__dot--2"></span><span class="media-ai__dot media-ai__dot--3"></span><span class="media-ai__core"><svg class="icon icon--lg"><use href="#i-sparkles"/></svg></span></div>
+              <span class="stack-card__pill">08 / 08</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 04 · Zaleora AI ───────────────────────── -->
+    <section class="section section--plum lattice ai" id="ai">
+      <div class="ai__glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="mosaic">
+
+          <!-- Row 1 -->
+          <div class="mosaic__row mosaic__row--top">
+
+            <article class="m-tile m-photo m-photo--a reveal">
+              <img src="assets/ai-companion.jpg" alt="A creative working at a computer in a bright studio" loading="lazy" />
+              <span class="m-photo__shade" aria-hidden="true"></span>
+
+              <header class="m-top">
+                <p class="m-eyebrow">Meet Zaleora AI</p>
+                <p class="m-tag"><svg class="icon icon--sm"><use href="#i-sparkles"/></svg>Concept preview</p>
+              </header>
+
+              <div class="m-chat" role="img" aria-label="Concept preview: a creative asks what to focus on this week and Zaleora AI suggests a matching brief and a draft post, each waiting for approval.">
+                <p class="m-chat__user">What should I focus on this week?</p>
+                <div class="m-chat__ai">
+                  <p class="m-chat__row"><span>A brief that matches your skills</span><b>View</b></p>
+                  <p class="m-chat__row"><span>A draft post from your recent work</span><b class="is-solid">Approve</b></p>
+                </div>
+              </div>
+
+              <div class="m-bottom">
+                <h2 class="m-title">Meet Your Intelligent Creative Companion.</h2>
+                <span class="m-line" aria-hidden="true"></span>
+                <div class="m-foot">
+                  <p><svg class="icon"><use href="#i-sparkles"/></svg>More than a chatbot. An AI designed to understand your creative journey.</p>
+                  <svg class="icon icon--lg m-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="m-tile m-lilac reveal" style="--d:.08s">
+              <p class="m-label">Parts of your journey it’s designed to understand<sup>*</sup></p>
+              <p class="m-big">7</p>
+
+              <div class="m-lilac__foot">
+                <div class="m-sticker" aria-hidden="true">
+                  <svg viewBox="0 0 120 120">
+                    <defs><path id="stickerPath" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+                    <circle cx="60" cy="60" r="60" fill="#f5bf43"/>
+                    <text font-size="9.5" font-weight="800" fill="#2e1435" letter-spacing="1.4">
+                      <textPath href="#stickerPath" textLength="280" lengthAdjust="spacing">ZALEORA AI · THE INTELLIGENCE LAYER · </textPath>
+                    </text>
+                  </svg>
+                  <span class="m-sticker__core"><svg class="icon icon--lg"><use href="#i-sparkles"/></svg></span>
+                </div>
+
+                <div class="m-list">
+                  <p class="m-list__head">It understands<sup>*</sup></p>
+                  <ul>
+                    <li>Skills</li>
+                    <li>Portfolio</li>
+                    <li>Learning</li>
+                    <li>Marketplace activity</li>
+                    <li>Collaborations</li>
+                    <li>Opportunities</li>
+                    <li>Goals</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="m-tile m-photo m-photo--c reveal" style="--d:.16s">
+              <img src="assets/opportunities.jpg" alt="An artist at work on a canvas"loading="lazy" />
+              <span class="m-photo__shade" aria-hidden="true"></span>
+
+              <header class="m-top m-top--end">
+                <p class="m-eyebrow">The creative<sup>*</sup></p>
+              </header>
+
+              <div class="m-bottom">
+                <p class="m-title m-title--sm">You stay in control.</p>
+                <span class="m-line" aria-hidden="true"></span>
+                <div class="m-foot">
+                  <p><svg class="icon"><use href="#i-shield"/></svg>Publishing, pricing and decisions stay yours</p>
+                  <svg class="icon icon--lg m-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="mosaic__row mosaic__row--bottom">
+
+            <article class="m-tile m-purple reveal">
+              <svg class="m-asterisk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7"/></svg>
+              <p class="m-serif">Spend less time figuring out what to do next.</p>
+              <div class="m-small-foot">
+                <span>Zaleora<br />AI</span>
+                <span>(Designed to help)</span>
+              </div>
+            </article>
+
+            <article class="m-tile m-bronze reveal" style="--d:.08s">
+              <p class="m-label">Pathways, one intelligence layer across the ecosystem<sup>*</sup></p>
+              <p class="m-big m-big--md">8<span>pathways</span></p>
+              <div class="m-small-foot">
+                <span>Zaleora<br />AI</span>
+                <span>(Ecosystem-wide)</span>
+              </div>
+            </article>
+
+            <article class="m-tile m-yellow reveal" style="--d:.16s">
+              <div class="m-yellow__left">
+                <p class="m-label">Designed to help you<sup>*</sup></p>
+                <ol class="m-help">
+                  <li><span>01</span>Discover relevant opportunities</li>
+                  <li><span>02</span>Turn your work into compelling content</li>
+                  <li><span>03</span>Improve your portfolio</li>
+                  <li><span>04</span>Find learning resources</li>
+                  <li><span>05</span>Promote your products and services</li>
+                  <li><span>06</span>Organise your priorities</li>
+                </ol>
+              </div>
+
+              <span class="m-slash" aria-hidden="true">/</span>
+
+              <div class="m-yellow__right">
+                <div class="m-avatars" aria-hidden="true">
+                  <img src="assets/face-1.jpg" alt="" loading="lazy" />
+                  <img src="assets/face-4.jpg" alt="" loading="lazy" />
+                  <img src="assets/face-7.jpg" alt="" loading="lazy" />
+                </div>
+                <p class="m-yellow__title">More time creating, connecting and growing.</p>
+                <div class="m-yellow__action">
+                  <a href="#waitlist" class="m-cta" data-cta>Join the Waitlist<svg class="icon icon--sm"><use href="#i-arrow-up-right"/></svg></a>
+                  <span class="m-hash">#FromHandsToHeart</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 05 · From Hands to Heart ───────────────────────── -->
+    <section class="section section--ivory poster-sec" id="about">
+      <div class="poster">
+
+        <div class="poster__head">
+          <h2 class="poster__title reveal">
+            <span>The Past</span>
+            <span>Should Inform</span>
+            <span class="is-accent">The Future.</span>
+          </h2>
+        </div>
+
+        <div class="poster__art">
+          <figure class="poster__photo reveal" style="--d:.1s">
+            <img src="assets/poster.jpg" alt="A weaver working at a traditional loom" loading="lazy" />
+            <figcaption><span>Zaleora ©</span><span>Heritage / 07</span></figcaption>
+          </figure>
+
+          <div class="poster__panel reveal" style="--d:.2s" aria-hidden="true">
+            <svg class="poster__heart" viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-9.6-9.4C1 8.3 2.9 4.8 6.3 4.8c2 0 3.7 1.2 4.7 2.9 1-1.7 2.7-2.9 4.7-2.9 3.4 0 5.3 3.5 3.9 6.8C19.6 16.3 12 21 12 21z"/></svg>
+          </div>
+
+          <figure class="poster__sticker reveal" style="--d:.3s">
+            <div class="poster__sticker-img">
+              <img src="assets/sticker.jpg" alt="A creative laughing" loading="lazy" />
+            </div>
+          </figure>
+
+          <p class="poster__fig" aria-hidden="true">
+            <span>Fig. 02</span>
+            <svg viewBox="0 0 56 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6C20 1 40 9 50 30"/><path d="M42 28l8 3 2-9"/></svg>
+          </p>
+        </div>
+
+        <div class="poster__body">
+          <p class="poster__text reveal" style="--d:.1s">
+            The future of creativity will not be shaped by technology alone. It will be shaped by people who know how to use
+            technology without losing the knowledge, identity and human experience that make their work meaningful.
+          </p>
+          <p class="poster__text reveal" style="--d:.16s">
+            Zaleora connects the knowledge we inherit with the skills we develop, the work we create and the opportunities we build.
+          </p>
+          <p class="poster__meta reveal" style="--d:.22s">
+            From Hands to Heart<br />Knowledge · Skills · Work · Opportunities
+          </p>
+          <a class="poster__link reveal" style="--d:.28s" href="#waitlist" data-cta>
+            Join the Waitlist
+            <svg class="icon icon--sm"><use href="#i-arrow-down-right"/></svg>
+          </a>
+        </div>
+
+        <aside class="poster__quote reveal" style="--d:.2s">
+          <blockquote>The past should not compete with the future. The past should inform it.</blockquote>
+          <p class="poster__sign">From Hands to Heart.</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 06 · Final CTA / Waitlist ───────────────────────── -->
+    <section class="cta" id="waitlist">
+      <div class="container cta__inner">
+        <p class="cta__kicker reveal"><img src="assets/favicon-32.png" alt="" width="32" height="32" />From Hands to Heart</p>
+
+        <h2 class="cta__title reveal" style="--d:.06s">
+          Your Creativity
+          <span class="cta__line-2">Deserves <span class="cta__chip" aria-hidden="true"><img src="assets/favicon-512.png" alt="" width="512" height="512" /></span> More.</span>
+        </h2>
+
+        <p class="cta__line reveal" style="--d:.12s">
+          Build your identity. Find your people. Discover opportunities. Grow what you carry.
+        </p>
+        <p class="cta__sub reveal" style="--d:.16s">
+          Be among the first to experience Zaleora and help shape the next chapter of creativity.
+          Join the waitlist to stay connected as we build.
+        </p>
+
+        <div class="cta__action reveal" style="--d:.2s">
+          <a href="#waitlist" class="btn btn--plum btn--lg" data-cta>
+            Join the Waitlist
+            <svg class="icon icon--sm btn__arrow"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <ul class="fan" id="cardFan" aria-hidden="true">
+        <li class="fcard fcard--photo fcard--outer" style="--a:-18.0deg;--x:-1.36;--dy:0.700;--z:18;--i:2"><img src="assets/face-3.jpg" alt="" loading="lazy" decoding="async" /></li>
+        <li class="fcard fcard--cover fcard--lilac" style="--a:-6.5deg;--x:-0.68;--dy:0.570;--z:19;--i:1"><span class="fcard__no">Zaleora / 02</span><span class="fcard__word">Academy</span><span class="fcard__shape fcard__shape--circle"></span></li>
+        <li class="fcard fcard--cover fcard--gold" style="--a:0.0deg;--x:0.00;--dy:0.500;--z:20;--i:0"><span class="fcard__no">Zaleora / 01</span><span class="fcard__word">Identity</span><span class="fcard__shape fcard__shape--diamond"></span></li>
+        <li class="fcard fcard--photo" style="--a:7.0deg;--x:0.68;--dy:0.570;--z:19;--i:1"><img src="assets/face-6.jpg" alt="" loading="lazy" decoding="async" /></li>
+        <li class="fcard fcard--cover fcard--sand fcard--outer" style="--a:18.0deg;--x:1.36;--dy:0.700;--z:18;--i:2"><span class="fcard__no">Zaleora / 07</span><span class="fcard__word">Heritage</span><span class="fcard__shape fcard__shape--half"></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="footer__logo" aria-label="Zaleora — back to top">
+          <img src="assets/logo-purple.png" alt="Zaleora" width="720" height="150" />
+        </a>
+        <p class="footer__about">One connected ecosystem for the creative journey.</p>
+        <p class="footer__sign">From Hands to Heart.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Explore">
+        <h3 class="footer__head">Explore</h3>
+        <ul>
+          <li><a href="#ecosystem">Ecosystem</a></li>
+          <li><a href="#ai">Zaleora AI</a></li>
+          <li><a href="#about">From Hands to Heart</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Company">
+        <h3 class="footer__head">Company</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col footer__col--wait">
+        <h3 class="footer__head">Waitlist</h3>
+        <p class="footer__note">Join the waitlist to stay connected as we build.</p>
+        <a href="#waitlist" class="btn btn--plum footer__cta" data-cta>
+          Join the Waitlist
+          <svg class="icon icon--sm btn__arrow"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__scene">
+      <svg class="scene" viewBox="0 0 1600 505" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="s-tuft"><circle fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="0" r="13"/><circle fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="14" cy="5" r="10"/><circle fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="-14" cy="6" r="10"/><circle fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="6" cy="-11" r="9"/><circle fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="-7" cy="-10" r="9"/><path fill="none" stroke="#2E1435" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" d="M-8 -2q4 -4 8 0M2 3q4 -4 8 0M-2 -12q4 -3 7 0"/></g>
+
+    <g id="s-vase">
+      <path fill="#efe3ec" stroke="#2E1435" stroke-width="1.4" stroke-linejoin="round" d="M-15 0C-28 -10 -32 -36 -21 -54C-16 -62 -10 -66 -9 -74L-9 -82L9 -82L9 -74C10 -66 16 -62 21 -54C32 -36 28 -10 15 0Z"/>
+      <path fill="none" stroke="#2E1435" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M-13 -82H13M-12 -86H12"/>
+      <path fill="none" stroke="#B4863E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M-26 -44L-18 -52L-10 -44L-2 -52L6 -44L14 -52L22 -44L27 -48"/>
+      <path fill="none" stroke="#B4863E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M-28 -30L-20 -38L-12 -30L-4 -38L4 -30L12 -38L20 -30L28 -38"/>
+      <path fill="none" stroke="#2E1435" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" d="M-14 -5H14M-19 -62H19M-9 -60C-15 -40 -13 -18 -9 -5M9 -60C15 -40 13 -18 9 -5M0 -62V-5"/>
+    </g>
+
+    <g id="s-person">
+      <path fill="#efe3ec" stroke="#2E1435" stroke-width="1.4" stroke-linejoin="round" d="M-6 -31L6 -31L10 0L-10 0Z"/>
+      <path fill="none" stroke="#B4863E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M-7.5 -19H7.5"/>
+      <ellipse fill="#2E1435" cx="0" cy="-36" rx="4.2" ry="4.7"/>
+      <path fill="#2E1435" d="M-6.5 -40C-3 -49 3 -49 6.5 -40C3 -38 -3 -38 -6.5 -40Z"/>
+      <path fill="none" stroke="#2E1435" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M12 -34L14 0"/>
+    </g>
+
+    <g id="s-flower">
+      <g ><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(0)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(45)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(90)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(135)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(180)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(225)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(270)"/><ellipse fill="#f1e6ee" stroke="#2E1435" stroke-width="1.15" cx="0" cy="-10" rx="5.5" ry="10" transform="rotate(315)"/></g>
+      <circle fill="#B4863E" cx="0" cy="0" r="4.2"/><circle fill="none" stroke="#2E1435" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" cx="0" cy="0" r="7"/>
+    </g>
+  </defs>
+
+  <!-- sun + far hills -->
+  <circle class="goldline" cx="1040" cy="268" r="34"/><circle class="gold" cx="1040" cy="268" r="26" fill-opacity=".22"/>
+  <path class="wash" d="M0 308C90 262 170 270 260 292C340 314 420 256 520 264C640 276 700 318 800 310C920 298 980 244 1100 256C1200 266 1260 306 1360 294C1450 284 1520 256 1600 282V350H0Z"/>
+  <path class="ink thin" d="M0 308C90 262 170 270 260 292C340 314 420 256 520 264C640 276 700 318 800 310C920 298 980 244 1100 256C1200 266 1260 306 1360 294C1450 284 1520 256 1600 282"/>
+  <path class="wash2" d="M0 334C110 300 220 318 330 330C470 346 560 306 700 316C840 326 920 296 1060 306C1200 316 1300 340 1440 322C1510 314 1560 306 1600 312V380H0Z"/>
+  <path class="ink thin" d="M0 334C110 300 220 318 330 330C470 346 560 306 700 316C840 326 920 296 1060 306C1200 316 1300 340 1440 322C1510 314 1560 306 1600 312"/>
+  <path class="ink thin" d="M520 190q6 -7 12 0q6 -7 12 0M560 168q4.800000000000001 -5.6000000000000005 9.600000000000001 0q4.800000000000001 -5.6000000000000005 9.600000000000001 0M1160 176q6 -7 12 0q6 -7 12 0M1210 198q5.1 -5.95 10.2 0q5.1 -5.95 10.2 0M1300 168q4.199999999999999 -4.8999999999999995 8.399999999999999 0q4.199999999999999 -4.8999999999999995 8.399999999999999 0M340 172q4.800000000000001 -5.6000000000000005 9.600000000000001 0q4.800000000000001 -5.6000000000000005 9.600000000000001 0"/>
+
+  <!-- ground -->
+  <path class="wash" d="M0 352C200 340 420 360 640 366C860 372 1080 352 1300 360C1420 364 1520 352 1600 348V505H0Z"/>
+
+  <!-- river -->
+  <path class="river" d="M100 520L120 470C260 424 470 430 640 412C780 398 900 400 1040 412C1190 424 1330 440 1500 470L1520 520Z"/>
+  <path class="ink thin" d="M120 470C260 424 470 430 640 412C780 398 900 400 1040 412C1190 424 1330 440 1500 470"/>
+  <path class="ink thin" d="M1214.9 418q6.8 -4.5 13.6 0t13.6 0 M643.4 455.3q12.8 -4.1 25.6 0t25.6 0 M956.1 465.9q7.2 -3.7 14.3 0t14.3 0 M969.1 467.6q12 -3.9 24 0t24 0 M1078.8 482.6q10.1 -4.8 20.3 0t20.3 0 M948.7 466.2q14.5 -4.8 29.1 0t29.1 0 M651.4 444.1q8.2 -3.3 16.3 0t16.3 0 M719.6 438.8q14.8 -4.1 29.6 0t29.6 0 M1148.8 469q7.5 -4.1 15 0t15 0 M704.7 453.6q14.5 -3.1 29 0t29 0 M651.9 443.6q14.7 -4 29.3 0t29.3 0 M697.7 429.6q8.5 -3.8 17 0t17 0 M836.8 441.3q7.1 -4.8 14.1 0t14.1 0 M1170 450q11.5 -4 23 0t23 0 M1012.8 453.3q8.9 -4.4 17.7 0t17.7 0 M880.7 435.6q8.1 -3.8 16.3 0t16.3 0 M1150.6 473.6q13.5 -3.2 27 0t27 0 M432.8 446.5q15.5 -3.4 30.9 0t30.9 0 M441.6 462.3q11 -3.3 22 0t22 0 M1214.2 482.5q14.2 -4.8 28.5 0t28.5 0 M542.3 471.3q7.2 -3.2 14.5 0t14.5 0 M909.3 418.1q12.7 -4 25.3 0t25.3 0 M562.4 466.1q7.1 -3.7 14.2 0t14.2 0 M417.6 480.6q4.5 -4.8 9.1 0t9.1 0 M1192.8 462.6q14.4 -3.4 28.8 0t28.8 0 M879.3 485.8q7.4 -3.4 14.9 0t14.9 0 M847 432.6q13 -4.4 25.9 0t25.9 0 M767.8 468q5.7 -4.8 11.4 0t11.4 0 M1001.5 427.2q4.9 -4.8 9.8 0t9.8 0 M1325.8 478.3q12.9 -3.8 25.8 0t25.8 0 M1043.3 435.4q8.9 -3.5 17.8 0t17.8 0 M1189.9 446.3q8.4 -4.2 16.7 0t16.7 0 M649.9 469.4q9.2 -3.4 18.3 0t18.3 0 M1307.3 439.8q11.5 -4.7 22.9 0t22.9 0 M510.5 482.3q6 -4 12 0t12 0 M1096.8 457q9.8 -3.4 19.6 0t19.6 0 M474.4 449.3q10.2 -4.1 20.5 0t20.5 0 M1049.7 453.5q12.8 -3.1 25.5 0t25.5 0 M828.7 438.9q12.5 -3.6 24.9 0t24.9 0 M956.7 434.5q5.3 -4.5 10.7 0t10.7 0 M1244.5 475.6q12 -4.9 24 0t24 0 M1064.9 419.8q12.5 -4.8 24.9 0t24.9 0 M423.4 420.6q5.7 -3.2 11.4 0t11.4 0 M917.7 418.7q6.6 -3.3 13.2 0t13.2 0 M965 432.2q9.5 -5 19 0t19 0 M987.5 447.6q8.9 -3.8 17.7 0t17.7 0 M539.7 422.3q15.2 -3.3 30.4 0t30.4 0 M780 482.8q6.8 -4.2 13.6 0t13.6 0 M369.7 429.9q11.6 -4.1 23.2 0t23.2 0 M1271.3 451.6q9 -3.6 18.1 0t18.1 0 M303.7 418.3q5.5 -3.5 11 0t11 0 M1097.5 482.7q9.3 -4.7 18.6 0t18.6 0 M1113.6 485.4q10.8 -3.7 21.6 0t21.6 0 M796.7 446.5q10.7 -4.4 21.5 0t21.5 0 M947.1 464.6q14.2 -4.7 28.5 0t28.5 0 M737 487.2q15 -5 30.1 0t30.1 0 M371.9 443q14.2 -4.4 28.4 0t28.4 0 M1274.2 469.7q6.8 -3.5 13.6 0t13.6 0 M433 473.9q13.3 -4.3 26.6 0t26.6 0 M832.2 467.8q14.1 -4.1 28.2 0t28.2 0 M584.3 479.2q9.3 -3.8 18.5 0t18.5 0 M878.9 431.1q14.4 -4.6 28.8 0t28.8 0 "/>
+
+  <!-- left: baobab + acacia -->
+  <g transform="translate(262 410)">
+    <path class="pot" d="M-24 0C-20 -34 -34 -62 -26 -96C-22 -112 22 -112 26 -96C34 -62 20 -34 24 0Z"/>
+    <path class="ink thin" d="M-9 -10C-7 -40 -11 -70 -7 -96M9 -8C11 -40 7 -70 11 -96M-18 -30C-16 -52 -20 -74 -16 -92"/>
+    <path class="ink" d="M-2 -104L-58 -146M-2 -104L-32 -170M2 -104L2 -178M6 -104L34 -168M8 -104L64 -146M10 -102L88 -124M-8 -102L-88 -128" style="stroke-width:2"/>
+    <path class="ink thin" d="M-58 -146L-72 -166M-32 -170L-48 -190M34 -168L52 -190M64 -146L80 -166M88 -124L108 -132"/>
+    <use href="#s-tuft" transform="translate(-58 -148) scale(1.25)" />
+    <use href="#s-tuft" transform="translate(-72 -168) scale(0.8)" />
+    <use href="#s-tuft" transform="translate(-32 -172) scale(1.05)" />
+    <use href="#s-tuft" transform="translate(-48 -192) scale(0.75)" />
+    <use href="#s-tuft" transform="translate(2 -184) scale(1.5)" />
+    <use href="#s-tuft" transform="translate(34 -170) scale(1.15)" />
+    <use href="#s-tuft" transform="translate(52 -192) scale(0.8)" />
+    <use href="#s-tuft" transform="translate(64 -148) scale(1.25)" />
+    <use href="#s-tuft" transform="translate(80 -168) scale(0.8)" />
+    <use href="#s-tuft" transform="translate(88 -126) scale(1)" />
+    <use href="#s-tuft" transform="translate(-88 -130) scale(1)" />
+    <use href="#s-tuft" transform="translate(108 -134) scale(0.7)" />
+  </g>
+  <g transform="translate(468 408)">
+    <path class="ink" d="M-5 0C-3 -30 -14 -46 -2 -70M-2 -70C-20 -78 -40 -78 -62 -88M-2 -70C14 -84 40 -86 66 -92M-2 -70L-2 -98" style="stroke-width:1.8"/>
+    <use href="#s-tuft" transform="translate(-62 -92) scale(1.1)" />
+    <use href="#s-tuft" transform="translate(-34 -92) scale(0.85)" />
+    <use href="#s-tuft" transform="translate(-2 -104) scale(1.2)" />
+    <use href="#s-tuft" transform="translate(36 -98) scale(0.9)" />
+    <use href="#s-tuft" transform="translate(66 -96) scale(1.1)" />
+  </g>
+  <use href="#s-tuft" transform="translate(330 404) scale(0.7)" /><use href="#s-tuft" transform="translate(372 408) scale(0.55)" /><use href="#s-tuft" transform="translate(196 410) scale(0.65)" />
+
+  <!-- centre: round gathering hut -->
+  <g transform="translate(800 388)">
+    <path class="pot" d="M-84 0H84L96 14H-96Z"/>
+    <path class="ink thin" d="M-96 14L-104 24H104L96 14M-84 0V-6H84V0"/>
+    <path class="ink" d="M-46 -6V-54M-16 -6V-54M16 -6V-54M46 -6V-54" style="stroke-width:2.4"/>
+    <path class="ink" d="M-60 -54H60"/>
+    <path class="gold" d="M-44 -65.5l4.5 4.5 -4.5 4.5 -4.5 -4.5zM-27 -65.5l4.5 4.5 -4.5 4.5 -4.5 -4.5zM-10 -65.5l4.5 4.5 -4.5 4.5 -4.5 -4.5zM7 -65.5l4.5 4.5 -4.5 4.5 -4.5 -4.5zM24 -65.5l4.5 4.5 -4.5 4.5 -4.5 -4.5zM41 -65.5l4.5 4.5 -4.5 4.5 -4.5 -4.5z"/>
+    <path class="pot" d="M-80 -66L0 -124L80 -66C66 -57 52 -66 40 -57C27 -66 13 -57 0 -66C-13 -57 -27 -66 -40 -57C-52 -66 -66 -57 -80 -66Z"/>
+    <path class="ink thin" d="M0 -124L-54 -64M0 -124L-27 -62M0 -124V-66M0 -124L27 -62M0 -124L54 -64"/>
+    <path class="goldline" d="M-80 -66C-66 -57 -52 -66 -40 -57C-27 -66 -13 -57 0 -66C13 -57 27 -66 40 -57C52 -66 66 -57 80 -66"/>
+    <path class="ink" d="M0 -124V-140"/><circle class="gold" cx="0" cy="-142" r="3.4"/>
+    <use href="#s-vase" transform="translate(0 -6) scale(0.46)" />
+    <use href="#s-tuft" transform="translate(-108 2) scale(0.75)" /><use href="#s-tuft" transform="translate(110 2) scale(0.85)" />
+  </g>
+  <use href="#s-person" transform="translate(902 392) scale(1.15)" />
+  <use href="#s-person" transform="translate(424 410) scale(1.25)" />
+
+  <!-- boat -->
+  <g transform="translate(1010 476)">
+    <path class="pot" d="M-72 -8C-50 12 50 12 74 -10C42 -2 -42 -2 -72 -8Z"/>
+    <path class="goldline" d="M-60 -5C-30 3 30 3 62 -6"/>
+    <use href="#s-person" transform="translate(8 -6) scale(1.3)" />
+    <path class="ink" d="M-34 -4C-34 -22 -16 -22 -16 -4Z" style="fill:#efe3ec"/><circle class="solid" cx="-25" cy="-27" r="4.2"/>
+    <path class="ink" d="M22 -62L64 14" style="stroke-width:1.6"/>
+    <path class="ink thin" d="M-92 14q22 6 44 0t44 0M40 18q18 6 36 0t36 0"/>
+  </g>
+
+  <!-- right: village + flowers -->
+  <g transform="translate(1262 396)">
+    <path class="pot" d="M-62 0V-72H62V0Z"/>
+    <path class="gold" d="M-52 -55l5 5 -5 5 -5 -5zM-37 -55l5 5 -5 5 -5 -5zM-22 -55l5 5 -5 5 -5 -5zM-7 -55l5 5 -5 5 -5 -5zM8 -55l5 5 -5 5 -5 -5zM23 -55l5 5 -5 5 -5 -5zM38 -55l5 5 -5 5 -5 -5zM53 -55l5 5 -5 5 -5 -5z"/>
+    <path class="ink thin" d="M-62 -34H62"/>
+    <path class="pot" d="M-80 -68L0 -118L80 -68Z"/>
+    <path class="ink thin" d="M-70 -76H70M-56 -86H56M-42 -96H42M-28 -106H28"/>
+    <path class="ink" d="M-84 -66H84"/>
+    <path class="pot" d="M-11 0V-30C-11 -42 11 -42 11 -30V0Z"/>
+    <rect class="pot" x="-50" y="-60" width="18" height="22" rx="1"/><path class="ink thin" d="M-50 -49H-32M-41 -60V-38"/>
+    <rect class="pot" x="32" y="-60" width="18" height="22" rx="1"/><path class="ink thin" d="M32 -49H50M41 -60V-38"/>
+  </g>
+  <g transform="translate(1400 404)">
+    <path class="pot" d="M-42 0V-46H42V0Z"/>
+    <path class="pot" d="M-54 -43L0 -80L54 -43Z"/>
+    <path class="ink thin" d="M-46 -50H46M-34 -59H34M-22 -68H22"/>
+    <path class="ink" d="M-58 -42H58"/>
+    <path class="gold" d="M-30 -26l4 4 -4 4 -4 -4zM-15 -26l4 4 -4 4 -4 -4zM0 -26l4 4 -4 4 -4 -4zM15 -26l4 4 -4 4 -4 -4zM30 -26l4 4 -4 4 -4 -4z"/>
+    <path class="pot" d="M-8 0V-20C-8 -29 8 -29 8 -20V0Z"/>
+  </g>
+  <use href="#s-vase" transform="translate(1098 408) scale(1.15)" />
+  <use href="#s-tuft" transform="translate(1180 404) scale(0.9)" /><use href="#s-tuft" transform="translate(1346 410) scale(0.7)" />
+  <path class="ink" d="M1450 420C1456 396 1470 384 1486 380M1500 420C1494 398 1506 386 1522 384M1540 420C1548 402 1560 394 1574 394M1420 424C1424 410 1432 404 1442 402" />
+  <use href="#s-flower" transform="translate(1486 384) scale(1.7)" /><use href="#s-flower" transform="translate(1432 404) scale(1.25)" /><use href="#s-flower" transform="translate(1540 396) scale(1.5)" /><use href="#s-flower" transform="translate(1580 410) scale(1.1)" /><use href="#s-flower" transform="translate(1372 412) scale(0.95)" />
+
+  <!-- left foreground -->
+  <use href="#s-vase" transform="translate(92 418) scale(1.5)" />
+  <path class="ink" d="M150 424C156 404 168 394 184 390M120 428C118 410 112 400 100 396" />
+  <use href="#s-flower" transform="translate(184 392) scale(1.3)" /><use href="#s-flower" transform="translate(154 410) scale(1)" />
+  <use href="#s-vase" transform="translate(566 414) scale(0.8)" />
+  <use href="#s-tuft" transform="translate(616 414) scale(0.6)" />
+
+  <path class="ink thin" d="M540.8 401.2q-2 -6.1 -4 -12.1M540.8 401.2q0 -6.1 1 -15.1M540.8 401.2q2 -6.1 5 -11.1 M1403.8 420.1q-2 -4.4 -4 -8.8M1403.8 420.1q0 -4.4 1 -11.8M1403.8 420.1q2 -4.4 5 -7.8 M1473.5 418q-2 -3.6 -4 -7.2M1473.5 418q0 -3.6 1 -10.2M1473.5 418q2 -3.6 5 -6.2 M635.6 399.4q-2 -6.1 -4 -12.2M635.6 399.4q0 -6.1 1 -15.2M635.6 399.4q2 -6.1 5 -11.2 M1436.6 421.1q-2 -4 -4 -7.9M1436.6 421.1q0 -4 1 -10.9M1436.6 421.1q2 -4 5 -6.9 M1515.7 430.6q-2 -3.8 -4 -7.6M1515.7 430.6q0 -3.8 1 -10.6M1515.7 430.6q2 -3.8 5 -6.6 M186.9 429.3q-2 -3.1 -4 -6.1M186.9 429.3q0 -3.1 1 -9.1M186.9 429.3q2 -3.1 5 -5.1 M1299 405.8q-2 -5.7 -4 -11.3M1299 405.8q0 -5.7 1 -14.3M1299 405.8q2 -5.7 5 -10.3 M1201.8 407q-2 -3.6 -4 -7.2M1201.8 407q0 -3.6 1 -10.2M1201.8 407q2 -3.6 5 -6.2 M530 401.5q-2 -6.2 -4 -12.4M530 401.5q0 -6.2 1 -15.4M530 401.5q2 -6.2 5 -11.4 M1528.1 427.9q-2 -5.6 -4 -11.3M1528.1 427.9q0 -5.6 1 -14.3M1528.1 427.9q2 -5.6 5 -10.3 M1243.9 406.6q-2 -6.2 -4 -12.3M1243.9 406.6q0 -6.2 1 -15.3M1243.9 406.6q2 -6.2 5 -11.3 M1173.9 407q-2 -5.7 -4 -11.4M1173.9 407q0 -5.7 1 -14.4M1173.9 407q2 -5.7 5 -10.4 M160.4 418.8q-2 -5.8 -4 -11.5M160.4 418.8q0 -5.8 1 -14.5M160.4 418.8q2 -5.8 5 -10.5 M359.8 405.7q-2 -5.6 -4 -11.2M359.8 405.7q0 -5.6 1 -14.2M359.8 405.7q2 -5.6 5 -10.2 M401.5 404.8q-2 -4 -4 -8M401.5 404.8q0 -4 1 -11M401.5 404.8q2 -4 5 -7 M1300.5 405.7q-2 -4.1 -4 -8.2M1300.5 405.7q0 -4.1 1 -11.2M1300.5 405.7q2 -4.1 5 -7.2 M1448.8 418.9q-2 -6.1 -4 -12.2M1448.8 418.9q0 -6.1 1 -15.2M1448.8 418.9q2 -6.1 5 -11.2 M167.4 434.6q-2 -5.3 -4 -10.5M167.4 434.6q0 -5.3 1 -13.5M167.4 434.6q2 -5.3 5 -9.5 M1316.7 405.4q-2 -4.9 -4 -9.8M1316.7 405.4q0 -4.9 1 -12.8M1316.7 405.4q2 -4.9 5 -8.8 M1386.1 403.7q-2 -6.6 -4 -13.1M1386.1 403.7q0 -6.6 1 -16.1M1386.1 403.7q2 -6.6 5 -12.1 M1163.4 407q-2 -7.1 -4 -14.2M1163.4 407q0 -7.1 1 -17.2M1163.4 407q2 -7.1 5 -13.2 M1373.1 404.1q-2 -3.9 -4 -7.7M1373.1 404.1q0 -3.9 1 -10.7M1373.1 404.1q2 -3.9 5 -6.7 M1151.5 406.9q-2 -3.7 -4 -7.4M1151.5 406.9q0 -3.7 1 -10.4M1151.5 406.9q2 -3.7 5 -6.4 M200.4 406.9q-2 -7.3 -4 -14.5M200.4 406.9q0 -7.3 1 -17.5M200.4 406.9q2 -7.3 5 -13.5 M1527.7 419q-2 -3.3 -4 -6.7M1527.7 419q0 -3.3 1 -9.7M1527.7 419q2 -3.3 5 -5.7 M419.2 404.4q-2 -7.2 -4 -14.5M419.2 404.4q0 -7.2 1 -17.5M419.2 404.4q2 -7.2 5 -13.5 M1391.6 403.6q-2 -7.3 -4 -14.6M1391.6 403.6q0 -7.3 1 -17.6M1391.6 403.6q2 -7.3 5 -13.6 M443.3 403.7q-2 -3.9 -4 -7.8M443.3 403.7q0 -3.9 1 -10.8M443.3 403.7q2 -3.9 5 -6.8 M47.6 426.5q-2 -5.5 -4 -11M47.6 426.5q0 -5.5 1 -14M47.6 426.5q2 -5.5 5 -10 M226.5 407q-2 -4.5 -4 -8.9M226.5 407q0 -4.5 1 -11.9M226.5 407q2 -4.5 5 -7.9 M769.5 399.3q-2 -3.2 -4 -6.5M769.5 399.3q0 -3.2 1 -9.5M769.5 399.3q2 -3.2 5 -5.5 M71 419.7q-2 -5.8 -4 -11.7M71 419.7q0 -5.8 1 -14.7M71 419.7q2 -5.8 5 -10.7 M1165 407q-2 -5.3 -4 -10.6M1165 407q0 -5.3 1 -13.6M1165 407q2 -5.3 5 -9.6 M1120.6 406.7q-2 -4.7 -4 -9.5M1120.6 406.7q0 -4.7 1 -12.5M1120.6 406.7q2 -4.7 5 -8.5 M1233 406.7q-2 -7.3 -4 -14.7M1233 406.7q0 -7.3 1 -17.7M1233 406.7q2 -7.3 5 -13.7 M1138.4 406.9q-2 -5.7 -4 -11.4M1138.4 406.9q0 -5.7 1 -14.4M1138.4 406.9q2 -5.7 5 -10.4 M1284.3 406q-2 -3.8 -4 -7.5M1284.3 406q0 -3.8 1 -10.5M1284.3 406q2 -3.8 5 -6.5 M104.7 431.1q-2 -5.9 -4 -11.8M104.7 431.1q0 -5.9 1 -14.8M104.7 431.1q2 -5.9 5 -10.8 M195.1 419.2q-2 -3.4 -4 -6.7M195.1 419.2q0 -3.4 1 -9.7M195.1 419.2q2 -3.4 5 -5.7 M566.7 400.6q-2 -3.9 -4 -7.8M566.7 400.6q0 -3.9 1 -10.8M566.7 400.6q2 -3.9 5 -6.8 M1023.9 405.1q-2 -3.2 -4 -6.5M1023.9 405.1q0 -3.2 1 -9.5M1023.9 405.1q2 -3.2 5 -5.5 M2.6 433q-2 -6.9 -4 -13.8M2.6 433q0 -6.9 1 -16.8M2.6 433q2 -6.9 5 -12.8 M71.1 431.8q-2 -4.4 -4 -8.9M71.1 431.8q0 -4.4 1 -11.9M71.1 431.8q2 -4.4 5 -7.9 M1274.8 406.2q-2 -3.1 -4 -6.1M1274.8 406.2q0 -3.1 1 -9.1M1274.8 406.2q2 -3.1 5 -5.1 M1589.4 421.7q-2 -5.9 -4 -11.8M1589.4 421.7q0 -5.9 1 -14.8M1589.4 421.7q2 -5.9 5 -10.8 M684.1 399q-2 -3.8 -4 -7.6M684.1 399q0 -3.8 1 -10.6M684.1 399q2 -3.8 5 -6.6 M1208.5 406.9q-2 -6.4 -4 -12.8M1208.5 406.9q0 -6.4 1 -15.8M1208.5 406.9q2 -6.4 5 -11.8 M398.6 404.9q-2 -6.9 -4 -13.7M398.6 404.9q0 -6.9 1 -16.7M398.6 404.9q2 -6.9 5 -12.7 M1301.6 405.7q-2 -4.4 -4 -8.9M1301.6 405.7q0 -4.4 1 -11.9M1301.6 405.7q2 -4.4 5 -7.9 M734.8 399.1q-2 -4.1 -4 -8.3M734.8 399.1q0 -4.1 1 -11.3M734.8 399.1q2 -4.1 5 -7.3 M1410.4 433.7q-2 -6.1 -4 -12.1M1410.4 433.7q0 -6.1 1 -15.1M1410.4 433.7q2 -6.1 5 -11.1 M1311.6 405.5q-2 -6.7 -4 -13.3M1311.6 405.5q0 -6.7 1 -16.3M1311.6 405.5q2 -6.7 5 -12.3 M1217.1 406.9q-2 -7.4 -4 -14.7M1217.1 406.9q0 -7.4 1 -17.7M1217.1 406.9q2 -7.4 5 -13.7 M1106.1 406.5q-2 -6.2 -4 -12.4M1106.1 406.5q0 -6.2 1 -15.4M1106.1 406.5q2 -6.2 5 -11.4 M518.9 401.7q-2 -6.9 -4 -13.8M518.9 401.7q0 -6.9 1 -16.8M518.9 401.7q2 -6.9 5 -12.8 M260.7 406.9q-2 -6.8 -4 -13.6M260.7 406.9q0 -6.8 1 -16.6M260.7 406.9q2 -6.8 5 -12.6 M1326.1 405.2q-2 -3.2 -4 -6.4M1326.1 405.2q0 -3.2 1 -9.4M1326.1 405.2q2 -3.2 5 -5.4 M370.9 405.5q-2 -3.9 -4 -7.8M370.9 405.5q0 -3.9 1 -10.8M370.9 405.5q2 -3.9 5 -6.8 "/>
+</svg>
+      <div class="footer__bar">
+        <div class="container footer__bar-inner">
+          <div class="footer__social" aria-label="Social links">
+            <a href="#" aria-label="Zaleora on X"><svg class="icon"><use href="#i-x"/></svg></a>
+            <a href="#" aria-label="Zaleora on Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+            <a href="#" aria-label="Zaleora on LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+          </div>
+          <div class="footer__legal">
+            <span>© <span id="year">2026</span> Zaleora</span>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────────────────────── Waitlist modal ───────────────────────── -->
+  <dialog class="wl-modal" id="waitlistModal" aria-labelledby="wlTitle" aria-describedby="wlDesc">
+    <div class="wl-modal__card">
+      <button class="wl-modal__close" type="button" data-modal-close aria-label="Close">
+        <svg class="icon"><use href="#i-close"/></svg>
+      </button>
+
+      <div class="wl-modal__media" aria-hidden="true">
+        <img class="wl-modal__photo" src="assets/waitlist.jpg" alt="" loading="lazy" />
+        <span class="wl-modal__scrim"></span>
+        <img class="wl-modal__logo" src="assets/logo-white.png" alt="" width="720" height="150" />
+        <div class="wl-modal__media-foot">
+          <div class="wl-modal__faces">
+            <img src="assets/face-8.jpg" alt="" loading="lazy" />
+            <img src="assets/face-11.jpg" alt="" loading="lazy" />
+            <img src="assets/face-10.jpg" alt="" loading="lazy" />
+          </div>
+          <p class="wl-modal__sign">From Hands to Heart.</p>
+          <p class="wl-modal__meta">Identity · Skills · Work · Opportunities</p>
+        </div>
+      </div>
+
+      <div class="wl-modal__body">
+        <div class="wl-modal__view" data-view="form">
+          <p class="eyebrow eyebrow--gold">The Zaleora Waitlist</p>
+          <h2 class="wl-modal__title" id="wlTitle">Be Among the First.</h2>
+          <p class="wl-modal__lede" id="wlDesc">
+            Join the waitlist to stay connected as we build — and help shape the next chapter of creativity.
+          </p>
+
+          <form class="wl-form" id="waitlistModalForm" novalidate>
+            <div class="wl-field">
+              <label class="wl-field__label" for="wlName">Name</label>
+              <input class="wl-field__input" id="wlName" name="name" type="text" autocomplete="name"
+                     placeholder="Your full name" maxlength="80" required aria-describedby="wlNameError" />
+              <p class="wl-field__error" id="wlNameError"></p>
+            </div>
+            <div class="wl-field">
+              <label class="wl-field__label" for="wlEmail">Email</label>
+              <input class="wl-field__input" id="wlEmail" name="email" type="email" inputmode="email" autocomplete="email"
+                     placeholder="name@example.com" maxlength="254" required aria-describedby="wlEmailError" />
+              <p class="wl-field__error" id="wlEmailError"></p>
+            </div>
+            <!-- Spam trap: hidden from people, bots tend to fill it in. -->
+            <div class="wl-form__trap" aria-hidden="true">
+              <label for="wlCompany">Company</label>
+              <input id="wlCompany" name="company" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button class="btn btn--plum btn--lg wl-form__submit" type="submit">
+              <span class="wl-form__label">Join the Waitlist</span>
+              <svg class="icon icon--sm btn__arrow"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="wl-form__status" role="status" aria-live="polite"></p>
+            <p class="wl-form__note"><svg class="icon icon--sm"><use href="#i-shield"/></svg>We’ll only use your details to keep you updated on Zaleora.</p>
+          </form>
+        </div>
+
+        <div class="wl-modal__view wl-modal__done" data-view="done" hidden>
+          <span class="wl-modal__tick" aria-hidden="true"><svg class="icon icon--lg"><use href="#i-check"/></svg></span>
+          <h2 class="wl-modal__title" id="wlDoneTitle" tabindex="-1">You’re on the List.</h2>
+          <p class="wl-modal__lede">Thank you<span data-first-name></span> — we’ll keep you posted as we build.</p>
+          <p class="wl-modal__hash">#FromHandsToHeart</p>
+          <button class="btn btn--gold btn--lg" type="button" data-modal-close>Back to Zaleora</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
